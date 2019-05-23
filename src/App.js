@@ -1,12 +1,31 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Clock from './component/Clock'
+import TemperatureCalculator from "./component/TemperatureCalculator";
+import FilterableProductTable from "./component/SortListPanel";
+import DataTable from "./component/DataTable";
+import JinSquare from "./component/jin/JinSquare";
+
+const staticData = [
+  {category: "Sporting Goods", price: "$49.99", stocked: true, name: "Football"},
+  {category: "Sporting Goods", price: "$9.99", stocked: true, name: "Baseball"},
+  {category: "Sporting Goods", price: "$29.99", stocked: false, name: "Basketball"},
+  {category: "Electronics", price: "$99.99", stocked: true, name: "iPod Touch"},
+  {category: "Electronics", price: "$399.99", stocked: false, name: "iPhone 5"},
+  {category: "Electronics", price: "$199.99", stocked: true, name: "Nexus 7"}
+];
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {/*<img src={logo} className="App-logo" alt="logo" />*/}
+        <Clock />
+        <TemperatureCalculator/>
+        <FilterableProductTable products={staticData}/>
+        <DataTable />
+        <JinSquare />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
