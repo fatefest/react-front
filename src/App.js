@@ -5,7 +5,7 @@ import Clock from './component/Clock'
 import TemperatureCalculator from "./component/TemperatureCalculator";
 import FilterableProductTable from "./component/SortListPanel";
 import DataTable from "./component/DataTable";
-import JinSquare from "./component/jin/JinSquare";
+import JinPanel from "./component/jin/JinPanel";
 
 const staticData = [
   {category: "Sporting Goods", price: "$49.99", stocked: true, name: "Football"},
@@ -25,7 +25,7 @@ function App() {
         <TemperatureCalculator/>
         <FilterableProductTable products={staticData}/>
         <DataTable />
-        <JinSquare />
+        <JinPanel />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
